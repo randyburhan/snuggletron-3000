@@ -47,7 +47,7 @@ body {
   font-family: "DIN Next W01", sans-serif;
 
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 section {
@@ -84,7 +84,7 @@ $colour__commreg-4: rgba(12, 30, 112, 1);
   background: linear-gradient(to bottom, $colour__commreg-0 0%, $colour__commreg-1 100%);
 }
 
-/* Transport Picker
+/* Transport Picker (Page 0)
    ========================================================================== */
 
 .commreg__transport-picker {
@@ -116,7 +116,7 @@ $colour__commreg-4: rgba(12, 30, 112, 1);
   color: $colour__commreg-0;
 }
 
-/* Station Picker
+/* Station Picker (Page 0)
    ========================================================================== */
 
 .commreg__station-picker select {
@@ -124,7 +124,6 @@ $colour__commreg-4: rgba(12, 30, 112, 1);
   font-size: 1.8em;
   border-radius: 4px;
 }
-
 
 /* Day Picker (Page 1)
    ========================================================================== */
@@ -161,6 +160,76 @@ $colour__commreg-4: rgba(12, 30, 112, 1);
 }
 
 body.commuter-registration-1 section#footer {
+  width: 500px;
+}
+
+/* Location Picker (Page 2)
+   ========================================================================== */
+
+.booking__location-picker {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+/* Size Picker (Page 2)
+   ========================================================================== */
+
+.booking__size-picker p {
+  margin-bottom: 6px;
+}
+
+.booking__size-picker .btn-group {
+  margin-bottom: 12px;
+}
+
+.booking__size-picker .btn-secondary {
+  margin: 0 auto;
+}
+
+.btn--booking__size {
+  font-size: 18px;
+  transition: background 0.5s, color 0.5s;
+  background: transparent;
+  color: white;
+  height: 80px;
+  width: 120px;
+  border: 2px solid white;
+  padding-top: 25px;
+  border-radius: 0;
+}
+
+.btn--booking__size.active {
+  background: white;
+  color: $colour__commreg-0;
+}
+
+.box-graphics {
+  width: 358px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.box-graphics img {
+  width: 200px; height: 200px;
+  background-position: center center;
+  background-size: cover;
+  display: block;
+  margin: 1em auto;
+}
+
+.box-graphics-small img {
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/4b/91/56/4b915650cbe4befa0b575399cc2fd64b.jpg");
+}
+
+.box-graphics-medium img {
+  background-image: url("https://pbs.twimg.com/media/BvF3VDXIQAA314b.jpg");
+}
+
+.box-graphics-large img {
+  background-image: url("http://66.media.tumblr.com/tumblr_ltclgjjoKL1r4hqvlo1_500.jpg");
+}
+
+body.commuter-registration-2 section#footer {
   width: 500px;
 }
 
