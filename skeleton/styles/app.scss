@@ -153,7 +153,7 @@ $colour__commreg-4: rgba(12, 30, 112, 1);
   border-radius: 0;
 }
 
-.btn-group:first-child {
+.btn-group.day:first-child {
   margin-right: -5px;
 }
 
@@ -351,4 +351,58 @@ $tick-colour-allowed: rgba(82, 179, 217, 1);
 .estimated-cost {
   font-size: 60px;
   font-weight: bold;
+}
+
+/* Parcel Picker (Page 5)
+   ========================================================================== */
+
+.btn--receive__parcel {
+  font-size: 18px;
+  transition: background 0.5s, color 0.5s;
+  background: transparent;
+  color: white;
+  height: 80px;
+  width: 100%;
+  border: 2px solid white;
+  padding-top: 27px;
+  border-radius: 0;
+}
+
+.btn--receive__parcel.active {
+  background: white;
+  color: $colour__commreg-0;
+}
+
+.btn--receive__parcel-2 {
+  margin-left: 0 !important;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+/* Parcel Location (Page 6)
+   ========================================================================== */
+
+.receive__parcel-location {
+  width: 100%;
+}
+
+.pick-up-details {
+  border: 2px solid white;
+  background: darken(white, 10%);
+  color: $colour__commreg-0;
+
+  font-weight: $font-weight__bold;
+  padding: 0.5em;
+  min-width: 350px;
+  width: 100%;
+}
+
+.pin {
+  border: 2px solid white;
+  background: darken(white, 10%);
+  color: $colour__commreg-0;
+
+  font-weight: $font-weight__light;
+  padding: 0.5em;
+  width: 100%;
 }
