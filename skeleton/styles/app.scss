@@ -168,7 +168,12 @@ $colour__commreg-4: rgba(12, 30, 112, 1);
 }
 
 body.commuter-registration-1 section#footer {
+  text-align: center;
   width: 500px;
+
+  .btn {
+    width: 200px;
+  }
 }
 
 /* Location Picker (Page 2)
@@ -241,7 +246,7 @@ body.commuter-registration-2 section#footer {
   width: 500px;
 }
 
-/* Page 3
+/* Parcel Timing (Page 3)
    ========================================================================== */
 
 .commuter-registration-3 {
@@ -251,5 +256,14 @@ body.commuter-registration-2 section#footer {
 
   .jumbotron {
     background-color: transparent;
+  }
+}
+
+body.commuter-registration-3 section#footer {
+  text-align: center;
+  width: 500px;
+
+  .btn {
+    width: 150px;
   }
 }

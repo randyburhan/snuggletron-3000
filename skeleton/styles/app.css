@@ -5006,7 +5006,10 @@ section#header {
   margin-top: 0.66em; }
 
 body.commuter-registration-1 section#footer {
+  text-align: center;
   width: 500px; }
+  body.commuter-registration-1 section#footer .btn {
+    width: 200px; }
 
 /* Location Picker (Page 2)
    ========================================================================== */
@@ -5065,10 +5068,16 @@ body.commuter-registration-1 section#footer {
 body.commuter-registration-2 section#footer {
   width: 500px; }
 
-/* Page 3
+/* Parcel Timing (Page 3)
    ========================================================================== */
 .commuter-registration-3 .slider-container > span {
   margin-left: 20px; }
 
 .commuter-registration-3 .jumbotron {
   background-color: transparent; }
+
+body.commuter-registration-3 section#footer {
+  text-align: center;
+  width: 500px; }
+  body.commuter-registration-3 section#footer .btn {
+    width: 150px; }
