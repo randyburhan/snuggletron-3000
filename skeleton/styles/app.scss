@@ -299,6 +299,9 @@ body.commuter-registration-3 section#footer {
 }
 
 .commuter-registration-3 {
+  .slider-container {
+    margin-bottom: 35px;
+  }
   .slider-container > span {
     margin-left: 28px;
   }
@@ -341,4 +344,9 @@ $tick-colour-allowed: rgba(82, 179, 217, 1);
 
 .slider-handle {
   background: $tick-colour-allowed;
+}
+
+.estimated-cost {
+  font-size: 60px;
+  font-weight: bold;
 }

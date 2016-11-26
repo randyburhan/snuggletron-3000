@@ -5109,6 +5109,9 @@ body.commuter-registration-3 section#footer {
   body.commuter-registration-3 section#footer .btn {
     width: 150px; }
 
+.commuter-registration-3 .slider-container {
+  margin-bottom: 35px; }
+
 .commuter-registration-3 .slider-container > span {
   margin-left: 28px; }
 
@@ -5138,3 +5141,8 @@ body.commuter-registration-3 section#footer {
 
 .slider-handle {
   background: #52b3d9; }
+
+.estimated-cost {
+  font-size: 60px;
+  font-weight: bold; }
+

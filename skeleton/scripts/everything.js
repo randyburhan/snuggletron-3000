@@ -124,22 +124,23 @@ function page3()
     $dropoff.find('option:contains("7:00")').first().prop('selected', true);
 
     var $slider =  $body.find('input.slider');
-    $slider.parent().hide();
+    var $sliderContainer = $body.find('.slider-container').hide();
     $body.find('.btn').click(function ()
     {
         if ($(this).find('input').attr('name') === 'anytime')
         {
-             $slider.parent().hide();
+             $sliderContainer.hide();
         }
         else
         {
-            $slider.parent().show();
+            $sliderContainer.show();
         }
     });
 
+    var $cost = $body.find('.estimated-cost');
     $slider.slider({
         step: 0.5,
-        value: 8,
+        value: 24,
         ticks: [0, 6, 12, 18, 24],
         ticks_positions: [0, 25, 50, 75, 100],
         ticks_labels: ['00:00', '06:00', '12:00', '18:00', '24:00'],
@@ -151,6 +152,8 @@ function page3()
     }).on('slide', function (ev) {
         var value = ev.value;
         var pickupTime = Math.floor(value).toString() + ":" + (value % 1 ? "30" : "00");
-	    $slider.parent().find('.inner').text(pickupTime);
+	    $body.find('.slider-display .inner').text(pickupTime);
+        var cost = 10 + (24 - value) * 0.5;
+        $cost.text('$' + cost);
     });
 }
