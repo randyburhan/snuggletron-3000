@@ -24,27 +24,29 @@
     <section id="masthead">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-xs">
+          <div class="col-xs text-xs-center">
+            <img class="img-fluid parcelhitch-branding" src="images/parcelhitch-logo.png" />
             <h1>When do you have to get it delivered by?</h1>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="content">
-      <form>
+    <section id="booking__parcel-timing">
+      <form  class="booking__time-picker">
         <div class="drop-off-time">
           <label>Drop off time</label>
-          <select>
-          </select>
+          <select></select>
         </div>
+
+        <hr>
 
         <div class="delivery-time">
           <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary active">
+            <label class="btn btn--booking__urgency active">
               <input type="radio" name="anytime" autocomplete="off" checked> Anytime (cheapest)
             </label>
-            <label class="btn btn-primary">
+            <label class="btn btn--booking__urgency">
               <input type="radio" name="specific" autocomplete="off"> Specific time
             </label>
           </div>

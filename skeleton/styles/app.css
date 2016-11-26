@@ -4926,6 +4926,11 @@ section#header {
 section#header {
   align-self: flex-end; }
 
+.parcelhitch-branding {
+  max-width: 320px;
+  margin-bottom: 1em;
+  margin-top: -2em; }
+
 /* ==========================================================================
    Commuter Registration
    ========================================================================== */
@@ -5036,7 +5041,7 @@ body.commuter-registration-1 section#footer {
   height: 80px;
   width: 120px;
   border: 2px solid white;
-  padding-top: 25px;
+  padding-top: 27px;
   border-radius: 0; }
 
 .btn--booking__size.active {
@@ -5070,11 +5075,33 @@ body.commuter-registration-2 section#footer {
 
 /* Parcel Timing (Page 3)
    ========================================================================== */
-.commuter-registration-3 .slider-container > span {
-  margin-left: 20px; }
+.booking__time-picker {
+  text-align: center; }
 
-.commuter-registration-3 .jumbotron {
-  background-color: transparent; }
+.booking__time-picker hr {
+  margin: 0.5em auto 1em;
+  max-width: 200px;
+  border-bottom: 2px solid white; }
+
+.drop-off-time {
+  font-size: 1.33em; }
+
+.delivery-time .btn-group {
+  margin-bottom: 16px; }
+
+.btn--booking__urgency {
+  font-size: 18px;
+  transition: background 0.5s, color 0.5s;
+  background: transparent;
+  color: white;
+  height: 80px;
+  border: 2px solid white;
+  padding-top: 27px;
+  border-radius: 0; }
+
+.btn--booking__urgency.active {
+  background: white;
+  color: #283faa; }
 
 body.commuter-registration-3 section#footer {
   text-align: center;
@@ -5082,20 +5109,32 @@ body.commuter-registration-3 section#footer {
   body.commuter-registration-3 section#footer .btn {
     width: 150px; }
 
+.commuter-registration-3 .slider-container > span {
+  margin-left: 28px; }
+
+.commuter-registration-3 .slider-horizontal {
+  margin-bottom: 0 !important; }
+
+.commuter-registration-3 .slider-tick-label {
+  margin-left: -26.25px !important; }
+
+.commuter-registration-3 .jumbotron {
+  background-color: transparent; }
+
 .slider-selection {
   background: #BABABA; }
   .slider-selection.tick-slider-selection {
     background: #BABABA; }
 
 .slider-tick {
-  background: green; }
+  background: #52b3d9;
+  opacity: 1; }
 
 .slider-tick.in-selection {
-  background: #BABABA; }
+  background: grey; }
 
 .slider-track {
-  background: green; }
+  background: #52b3d9; }
 
 .slider-handle {
-  background: green; }
-
+  background: #52b3d9; }
