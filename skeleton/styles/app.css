@@ -5081,3 +5081,21 @@ body.commuter-registration-3 section#footer {
   width: 500px; }
   body.commuter-registration-3 section#footer .btn {
     width: 150px; }
+
+.slider-selection {
+  background: #BABABA; }
+  .slider-selection.tick-slider-selection {
+    background: #BABABA; }
+
+.slider-tick {
+  background: green; }
+
+.slider-tick.in-selection {
+  background: #BABABA; }
+
+.slider-track {
+  background: green; }
+
+.slider-handle {
+  background: green; }
+

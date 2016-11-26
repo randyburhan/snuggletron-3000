@@ -121,6 +121,7 @@ function page3()
         $dropoff.append(new Option(time.toString() + ':00'));
         $dropoff.append(new Option(time.toString() + ':30'));
     });
+    $dropoff.find('option:contains("7:00")').first().prop('selected', true);
 
     var $slider =  $body.find('input.slider');
     $slider.parent().hide();
@@ -138,22 +139,18 @@ function page3()
 
     $slider.slider({
         step: 0.5,
-        range: true,
+        value: 8,
         ticks: [0, 6, 12, 18, 24],
         ticks_positions: [0, 25, 50, 75, 100],
         ticks_labels: ['00:00', '06:00', '12:00', '18:00', '24:00'],
         tooltip: 'hide',
         formatter: function(value) {
-            var from = Math.floor(value[0]).toString() + ":" + (value[0] % 1 ? "30" : "00");
-            var to = Math.floor(value[1]).toString() + ":" + (value[1] % 1 ? "30" : "00");
-		    return 'Between: ' + from + ' and ' + to;
+            var pickupTime = Math.floor(value).toString() + ":" + (value % 1 ? "30" : "00");
+		    return 'Earliest Pickup Time: ' + pickupTime;
 	    },
     }).on('slide', function (ev) {
         var value = ev.value;
-        var from = Math.floor(value[0]).toString() + ":" + (value[0] % 1 ? "30" : "00");
-        var to = Math.floor(value[1]).toString() + ":" + (value[1] % 1 ? "30" : "00");
-	    $slider.parent().find('.inner').text(from + ' and ' + to);
+        var pickupTime = Math.floor(value).toString() + ":" + (value % 1 ? "30" : "00");
+	    $slider.parent().find('.inner').text(pickupTime);
     });
-
-    
 }
