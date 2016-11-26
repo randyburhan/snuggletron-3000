@@ -90,7 +90,7 @@ function page2()
     $body.find('.box-graphics-medium').hide();
     $body.find('.box-graphics-large').hide();
 
-    $body.find('.btn').click(function ()
+    $body.find('.btn-group .btn').click(function ()
     {
         $body.find('.box-graphics-small').hide();
         $body.find('.box-graphics-medium').hide();
