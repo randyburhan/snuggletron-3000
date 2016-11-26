@@ -43,20 +43,42 @@ function page0()
 
 function page1()
 {
-    $('.time-selector').datetimepicker({
-        format: 'LT'
-    }).hide();
+    var $monday = $('.day');
+    $monday.find('button').text('Monday');
+    $monday.find('.time-selector').hide();
 
-    $('.day input[type="checkbox"]').click(function ()
+    var $times = $monday.find('select');
+    var times = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
+    times.forEach(function (time)
+    {
+        $times.append(new Option(time.toString() + ':00'));
+        $times.append(new Option(time.toString() + ':30'));
+    });
+
+    var days = ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+    days.forEach(function (day)
+    {
+        var $day = $monday.clone();
+        $day.find('button').text(day);
+        $monday.parent().append($day);
+    });
+
+    $times.change(function ()
+    {
+        var name = this.name;
+        $(this).closest('.day').siblings().find('select[name=' + name + ']').val(this.value);
+    });
+
+    $('.day .btn').click(function ()
     {
         var $timeSelector = $(this).parent().find('.time-selector');
-        if ($(this).prop('checked'))
+        if ($(this).is('.active'))
         {
-            $timeSelector.show();
+             $timeSelector.hide();
         }
         else
         {
-            $timeSelector.hide();
+            $timeSelector.show();
         }
     });
 }
