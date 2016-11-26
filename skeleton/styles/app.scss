@@ -130,33 +130,41 @@ $colour__commreg-4: rgba(12, 30, 112, 1);
 
 .commreg__day-picker .day {
   display: inline-block;
-  height: 200px;
+  height: 300px;
 }
 
 .btn--commreg__day {
   display: inline;
   text-transform: uppercase;
-  font-size: 28px;
+  font-size: 22px;
   transition: background 0.5s, color 0.5s;
   background: transparent;
   color: white;
-  height: 100px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   border: 2px solid white;
-  padding-top: 15px;
+  padding-top: 13px;
   border-radius: 0;
+}
+
+.btn-group:first-child {
+  margin-right: -5px;
 }
 
 .btn--commreg__day.active {
   background: white;
   color: $colour__commreg-0;
-  margin-bottom: 0.5em;
 }
 
 .commreg__day-picker .time-selector {
   display: block;
-  font-size: 1.2em;
+  font-size: 0.9em;
   padding: 0.25em;
+}
+
+.commreg__day-picker .time-selector label {
+  margin-bottom: 0;
+  margin-top: 0.66em;
 }
 
 body.commuter-registration-1 section#footer {
