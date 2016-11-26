@@ -1,6 +1,55 @@
 // compileNested: app.css
 
+/* ==========================================================================
+   Imported styles
+   ========================================================================== */
+
 @import "bootstrap-config";
 
+/* ==========================================================================
+   Global Variables
+   ========================================================================== */
+
+/* Typography
+   ========================================================================== */
+$font-weight__light:  300;
+$font-weight__normal: 400;
+$font-weight__bold:   700;
+
+/* z-indexes
+   ========================================================================== */
+
+$z-index__neg: -1;
+$z-index__1:    1;
+$z-index__2:    2;
+$z-index__3:    3;
+$z-index__4:    4;
+$z-index__5:    5;
+$z-index__6:    6;
+$z-index__7:    7;
+$z-index__8:    8;
+$z-index__9:    9;
+
+
+/* ==========================================================================
+   Shared Styles - Bigger Picture
+   ========================================================================== */
+
 body {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0;
+
+  min-height: 100vh;
+
+  color: white;
+  font-family: "DIN Next W01", sans-serif;
+
+  align-items: center;
+  justify-content: center;
 }
+
+section#header {
+  align-self: flex-start;
+}
+/* ==========================================================================   Commuter Registration   ========================================================================== *//* Variables   ========================================================================== *//* Colours */$colour__commreg-0: rgba(40, 63, 170, 1);$colour__commreg-1: rgba(105, 122, 201, 1);$colour__commreg-2: rgba(69, 89, 180, 1);$colour__commreg-3: rgba(20, 42, 142, 1);$colour__commreg-4: rgba(12, 30, 112, 1);/* Scaffolding   ========================================================================== */.commuter-registration {  background: linear-gradient(to bottom, $colour__commreg-0 0%, $colour__commreg-1 100%);}/* Daypicker   ========================================================================== */.commreg__daypicker div {  @include media-breakpoint-up(lg) {    display: flex;    flex-direction: row;  }}.btn--commreg__day {  display: inline-block;  text-transform: uppercase;  font-size: 28px;  transition: background 0.5s, color 0.5s;  border: 2px solid white;  width: 100%;  height: 100px;  padding-top: 35px;  border-radius: 0;  @include media-breakpoint-up(lg) {    height: 200px;    padding-top: 85px;  }}.btn--commreg__day.active {  background: white;  color: $colour__commreg-0;}
