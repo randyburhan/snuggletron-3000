@@ -10,7 +10,6 @@
 
     <!-- App CSS -->
     <link rel="stylesheet" href="styles/app.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker-standalone.min.css">
 
     <title>Commuter Registration - 1</title>
 
@@ -30,10 +29,10 @@
       </div>
     </section>
 
-    <section id="content">
-      <form>
+    <section id="day-picker">
+      <form class="commreg__day-picker">
         <div class="day">
-          <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"></button>
+          <button type="button" class="btn btn--commreg__day" data-toggle="button" aria-pressed="false" autocomplete="off"></button>
           <div class="time-selector">
             <label>Leave Home</label>
             <select name="home"></select>

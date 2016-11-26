@@ -34,7 +34,7 @@ function page0()
 
         $comboBox.first().prop('selectedIndex', 1);
     }
-   
+
     $('#transport-picker .btn').click(function ()
     {
         $stationPicker.show();
@@ -83,6 +83,7 @@ function page1()
         }
     });
 }
+<<<<<<< HEAD
 
 function page2()
 {
@@ -99,3 +100,5 @@ function page2()
         $body.find('.box-graphics-' + name).show();
     });
 }
+=======
+>>>>>>> b9904f6b4da317892e95a4ec6dc3d48c9f77f215
