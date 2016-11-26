@@ -5122,16 +5122,16 @@ body.commuter-registration-3 section#footer {
   background-color: transparent; }
 
 .slider-selection {
-  background: #BABABA; }
+  background: #bababa; }
   .slider-selection.tick-slider-selection {
-    background: #BABABA; }
+    background: #bababa; }
 
 .slider-tick {
   background: #52b3d9;
   opacity: 1; }
 
 .slider-tick.in-selection {
-  background: grey; }
+  background: #bababa; }
 
 .slider-track {
   background: #52b3d9; }

@@ -317,10 +317,10 @@ body.commuter-registration-3 section#footer {
 }
 
 .slider-selection {
-	background: #BABABA;
+	background: rgba(186, 186, 186, 1);
 
   &.tick-slider-selection {
-    background: #BABABA;
+    background: rgba(186, 186, 186, 1);
   }
 }
 
@@ -332,7 +332,7 @@ $tick-colour-allowed: rgba(82, 179, 217, 1);
 }
 
 .slider-tick.in-selection {
-  background: grey;
+  background: rgba(186, 186, 186, 1);
 }
 
 .slider-track {
