@@ -2,6 +2,7 @@
    Imported styles
    ========================================================================== */
 /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
+@import url(bootstrap-datetimepicker-standalone.css);
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -4917,11 +4918,14 @@ body {
   align-items: center;
   justify-content: center; }
 
+section {
+  margin: 1em auto; }
+
 section#header {
   align-self: flex-start; }
 
-section {
-  margin: 1em auto; }
+section#header {
+  align-self: flex-end; }
 
 /* ==========================================================================   Commuter Registration   ========================================================================== */
 /* Variables   ========================================================================== */

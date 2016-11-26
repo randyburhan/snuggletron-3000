@@ -5,6 +5,8 @@
    ========================================================================== */
 
 @import "bootstrap-config";
+@import "bootstrap-datetimepicker-standalone.css";
+// @import "../../bower_components/bootstrap-sass/assets/stylesheets";
 
 /* ==========================================================================
    Global Variables
@@ -49,11 +51,15 @@ body {
   justify-content: center;
 }
 
+section {
+  margin: 1em auto;
+}
+
 section#header {
   align-self: flex-start;
 }
 
-section {
-  margin: 1em auto;
+section#header {
+  align-self: flex-end;
 }
 /* ==========================================================================   Commuter Registration   ========================================================================== *//* Variables   ========================================================================== *//* Colours */$colour__commreg-0: rgba(40, 63, 170, 1);$colour__commreg-1: rgba(105, 122, 201, 1);$colour__commreg-2: rgba(69, 89, 180, 1);$colour__commreg-3: rgba(20, 42, 142, 1);$colour__commreg-4: rgba(12, 30, 112, 1);/* Scaffolding   ========================================================================== */.commuter-registration {  background: linear-gradient(to bottom, $colour__commreg-0 0%, $colour__commreg-1 100%);}/* Transport Picker   ========================================================================== */.commreg__transport-picker {  @include media-breakpoint-up(md) {    display: flex;    flex-direction: row;  }}.btn--commreg__transport {  display: inline-block;  text-transform: uppercase;  font-size: 28px;  transition: background 0.5s, color 0.5s;  border: 2px solid white;  height: 100px;  padding-top: 35px;  border-radius: 0;  @include media-breakpoint-up(md) {    height: 200px;    width: 200px;    padding-top: 85px;  }}.btn--commreg__transport.active {  background: white;  color: $colour__commreg-0;}/* Station Picker   ========================================================================== */.commreg__station-picker select {  width: 100%;  font-size: 1.8em;  border-radius: 4px;}
