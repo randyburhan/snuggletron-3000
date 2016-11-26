@@ -5054,21 +5054,22 @@ body.commuter-registration-1 section#footer {
   text-align: center; }
 
 .box-graphics img {
-  width: 200px;
-  height: 200px;
+  background-image: url("../images/parcelhitch-box.png");
+  background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
   display: block;
-  margin: 1em auto; }
+  margin: 1em auto;
+  width: 100%; }
 
 .box-graphics-small img {
-  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/4b/91/56/4b915650cbe4befa0b575399cc2fd64b.jpg"); }
+  height: 140px; }
 
 .box-graphics-medium img {
-  background-image: url("https://pbs.twimg.com/media/BvF3VDXIQAA314b.jpg"); }
+  height: 160px; }
 
 .box-graphics-large img {
-  background-image: url("http://66.media.tumblr.com/tumblr_ltclgjjoKL1r4hqvlo1_500.jpg"); }
+  height: 180px; }
 
 body.commuter-registration-2 section#footer {
   width: 500px; }
