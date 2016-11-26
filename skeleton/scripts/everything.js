@@ -2,6 +2,7 @@ $(function () {
     page0();
     page1();
     page2();
+    page3();
 });
 
 function page0()
@@ -98,4 +99,54 @@ function page2()
         var name = $(this).find('input').attr('name');
         $body.find('.box-graphics-' + name).show();
     });
+}
+
+function page3()
+{
+    var $body = $('.commuter-registration-3');
+    if (!$body.length)
+        return;
+
+    var $dropoff = $body.find('.drop-off-time select');
+    var times = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
+    times.forEach(function (time)
+    {
+        $dropoff.append(new Option(time.toString() + ':00'));
+        $dropoff.append(new Option(time.toString() + ':30'));
+    });
+
+    var $slider =  $body.find('input.slider');
+    $slider.parent().hide();
+    $body.find('.btn').click(function ()
+    {
+        if ($(this).find('input').attr('name') === 'anytime')
+        {
+             $slider.parent().hide();
+        }
+        else
+        {
+            $slider.parent().show();
+        }
+    });
+
+    $slider.slider({
+        step: 0.5,
+        range: true,
+        ticks: [0, 6, 12, 18, 24],
+        ticks_positions: [0, 25, 50, 75, 100],
+        ticks_labels: ['00:00', '06:00', '12:00', '18:00', '24:00'],
+        tooltip: 'hide',
+        formatter: function(value) {
+            var from = Math.floor(value[0]).toString() + ":" + (value[0] % 1 ? "30" : "00");
+            var to = Math.floor(value[1]).toString() + ":" + (value[1] % 1 ? "30" : "00");
+		    return 'Between: ' + from + ' and ' + to;
+	    },
+    }).on('slide', function (ev) {
+        var value = ev.value;
+        var from = Math.floor(value[0]).toString() + ":" + (value[0] % 1 ? "30" : "00");
+        var to = Math.floor(value[1]).toString() + ":" + (value[1] % 1 ? "30" : "00");
+	    $slider.parent().find('.inner').text(from + ' and ' + to);
+    });
+
+    
 }

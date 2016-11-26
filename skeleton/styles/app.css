@@ -2,7 +2,6 @@
    Imported styles
    ========================================================================== */
 /*! normalize.css v4.2.0 | MIT License | github.com/necolas/normalize.css */
-@import url(bootstrap-datetimepicker-standalone.css);
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -4927,14 +4926,19 @@ section#header {
 section#header {
   align-self: flex-end; }
 
-/* ==========================================================================   Commuter Registration   ========================================================================== */
-/* Variables   ========================================================================== */
+/* ==========================================================================
+   Commuter Registration
+   ========================================================================== */
+/* Variables
+   ========================================================================== */
 /* Colours */
-/* Scaffolding   ========================================================================== */
+/* Scaffolding
+   ========================================================================== */
 .commuter-registration {
   background: linear-gradient(to bottom, #283faa 0%, #697ac9 100%); }
 
-/* Transport Picker   ========================================================================== */
+/* Transport Picker
+   ========================================================================== */
 @media (min-width: 768px) {
   .commreg__transport-picker {
     display: flex;
@@ -4959,13 +4963,15 @@ section#header {
   background: white;
   color: #283faa; }
 
-/* Station Picker   ========================================================================== */
+/* Station Picker
+   ========================================================================== */
 .commreg__station-picker select {
   width: 100%;
   font-size: 1.8em;
   border-radius: 4px; }
 
-/* Day Picker   ========================================================================== */
+/* Day Picker
+   ========================================================================== */
 section#day-picker {
   align-self: flex-start; }
 
@@ -4990,3 +4996,10 @@ section#day-picker {
   display: inline-block;
   font-size: 1.33em;
   padding-left: 0.2em; }
+
+.commuter-registration-3 .slider-container > span {
+  margin-left: 20px; }
+
+.commuter-registration-3 .jumbotron {
+  background-color: transparent; }
+
