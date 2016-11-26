@@ -33,7 +33,7 @@ function page0()
 
         $comboBox.first().prop('selectedIndex', 1);
     }
-   
+
     $('#transport-picker .btn').click(function ()
     {
         $stationPicker.show();
