@@ -1,6 +1,7 @@
 $(function () {
     page0();
     page1();
+    page2();
 });
 
 function page0()
@@ -80,5 +81,21 @@ function page1()
         {
             $timeSelector.show();
         }
+    });
+}
+
+function page2()
+{
+    var $body = $('.commuter-registration-2');
+    $body.find('.box-graphics-medium').hide();
+    $body.find('.box-graphics-large').hide();
+
+    $body.find('.btn').click(function ()
+    {
+        $body.find('.box-graphics-small').hide();
+        $body.find('.box-graphics-medium').hide();
+        $body.find('.box-graphics-large').hide();
+        var name = $(this).find('input').attr('name');
+        $body.find('.box-graphics-' + name).show();
     });
 }
