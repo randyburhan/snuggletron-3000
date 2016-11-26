@@ -143,15 +143,17 @@ function page3()
         value: 24,
         ticks: [0, 6, 12, 18, 24],
         ticks_positions: [0, 25, 50, 75, 100],
-        ticks_labels: ['00:00', '06:00', '12:00', '18:00', '24:00'],
+        ticks_labels: ['00:00', '06:00', '12:00', '18:00', 'Next day'],
         tooltip: 'hide',
         formatter: function(value) {
             var pickupTime = Math.floor(value).toString() + ":" + (value % 1 ? "30" : "00");
+            if (pickupTime === '24:00') pickupTime = 'Next day';
 		    return 'Earliest Pickup Time: ' + pickupTime;
 	    },
     }).on('slide', function (ev) {
         var value = ev.value;
         var pickupTime = Math.floor(value).toString() + ":" + (value % 1 ? "30" : "00");
+        if (pickupTime === '24:00') pickupTime = 'Next day';
 	    $body.find('.slider-display .inner').text(pickupTime);
         var cost = 10 + (24 - value) * 0.5;
         $cost.text('$' + cost);
