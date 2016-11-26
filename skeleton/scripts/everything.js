@@ -17,9 +17,9 @@ function page0()
         switch (transportMode)
         {
             case "train":
-                $comboBox.append(new Option("Mascot"));
-                $comboBox.append(new Option("Green Square"));
                 $comboBox.append(new Option("Central"));
+                $comboBox.append(new Option("Parramatta"));
+                $comboBox.append(new Option("Chatswood"));
                 break;
             case "ferry":
                 $comboBox.append(new Option("Manly"));
@@ -33,7 +33,7 @@ function page0()
                 break;
         }
 
-        $comboBox.first().prop('selectedIndex', 1);
+        $comboBox.eq(1).prop('selectedIndex', 1);
     }
 
     $('#transport-picker .btn').click(function ()
@@ -53,9 +53,14 @@ function page1()
     var times = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
     times.forEach(function (time)
     {
+        var isPeak = [7,8,9,16,17,18].indexOf(time) > -1;
         $times.append(new Option(time.toString() + ':00'));
+        if (isPeak) $times.append(new Option(time.toString() + ':15'));
         $times.append(new Option(time.toString() + ':30'));
+        if (isPeak) $times.append(new Option(time.toString() + ':45'));
     });
+    $times.first().find('option:contains("8:00")').first().prop('selected', true);
+    $times.eq(1).find('option:contains("8:00")').first().prop('selected', true);
 
     var days = ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
     days.forEach(function (day)
@@ -63,6 +68,8 @@ function page1()
         var $day = $monday.clone();
         $day.find('button').text(day);
         $monday.parent().append($day);
+        $day.find('select option:contains("8:00")').slice(0, 1).prop('selected', true);
+        $day.find('select').eq(1).find('option:contains("8:00")').slice(0, 1).prop('selected', true);
     });
 
     $times.change(function ()
