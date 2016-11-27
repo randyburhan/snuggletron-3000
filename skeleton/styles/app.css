@@ -5122,6 +5122,12 @@ body.commuter-registration-3 section#footer {
 .commuter-registration-3 .slider-tick-label {
   margin-left: -26.25px !important; }
 
+.commuter-registration-3 .slider-display .inner {
+  background-color: white;
+  font-weight: 700;
+  color: #283faa;
+  font-size: 1.5em; }
+
 .commuter-registration-3 .jumbotron {
   background-color: transparent; }
 
