@@ -366,6 +366,8 @@ $tick-colour-allowed: rgba(82, 179, 217, 1);
   border: 2px solid white;
   padding-top: 27px;
   border-radius: 0;
+
+  vertical-align: text-bottom;
 }
 
 .btn--receive__parcel.active {
@@ -377,6 +379,11 @@ $tick-colour-allowed: rgba(82, 179, 217, 1);
   margin-left: 0 !important;
   border-top: 0;
   border-bottom: 0;
+}
+
+.dollar-value {
+  font-size: 1.66em;
+  font-weight: $font-weight__bold;
 }
 
 /* Parcel Location (Page 6)

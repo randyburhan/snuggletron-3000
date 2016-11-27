@@ -5158,7 +5158,8 @@ body.commuter-registration-3 section#footer {
   width: 100%;
   border: 2px solid white;
   padding-top: 27px;
-  border-radius: 0; }
+  border-radius: 0;
+  vertical-align: text-bottom; }
 
 .btn--receive__parcel.active {
   background: white;
@@ -5168,6 +5169,10 @@ body.commuter-registration-3 section#footer {
   margin-left: 0 !important;
   border-top: 0;
   border-bottom: 0; }
+
+.dollar-value {
+  font-size: 1.66em;
+  font-weight: 700; }
 
 /* Parcel Location (Page 6)
    ========================================================================== */
